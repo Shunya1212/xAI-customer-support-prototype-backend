@@ -3,8 +3,11 @@ FROM --platform=linux/amd64 python:3.14-bookworm
 # RUN wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | apt-key add -
 # RUN echo "deb https://packages.adoptium.net/artifactory/deb bullseye /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
 
-RUN apt-get update && \
-    apt-get install -y \
+# RUN apt-get update && \
+#     apt-get install -y \
+RUN apt-get update
+RUN apt-get install --reinstall -y python3-minimal
+RUN apt-get install -y \
     vim-tiny \
     # gdal-bin \
     supervisor \

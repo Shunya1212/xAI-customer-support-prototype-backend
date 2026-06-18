@@ -1,5 +1,5 @@
 """
-URL configuration for repbase_backend project.
+URL configuration for voice_agent_backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -20,16 +20,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
-    path('api/animal/', include('apps.animal.urls')),
-    path('api/specie/', include('apps.specie.urls')),
-    path('api/breeding/', include('apps.breeding.urls')),
-    path('api/feeding/', include('apps.feeding.urls')),
     path('api/users/', include('apps.users.urls')),
-    # path('api/health/', include('apps.health.urls')),
-    # path('api/member/', include('apps.member.urls')),
-    # path('api/facility/', include('apps.facility.urls'))
 ]
 
-admin.site.site_header = 'RepBase App Administration'
-admin.site.index_title = 'RepBase App Admin'
-admin.site.site_title = 'RepBase App Administration'
+admin.site.site_header = 'Voice Agent App Administration'
+admin.site.index_title = 'Voice Agent App Admin'
+admin.site.site_title = 'Voice Agent App Administration'
